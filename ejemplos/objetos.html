@@ -1,19 +1,62 @@
 <html>
-    <head>
-        <title>JavaScript</title>
-        <meta charset="UTF-8"/>
-        <script>
-        
-            //funcion
-            
-            //funcion anonima
-            
-            //una funcion como argumento
-            //sepuede definir ahi mismo
-            
-            //scope de una variable
-            
-        </script>
-    </head>
-    <body></body>
+	<head>
+		<title>JavaScript</title>
+		<meta charset="UTF-8"/>
+		<script>
+			//funcion
+			function saludar(nombre) {
+				alert("Buenos días" + nombre);
+				return 0;
+
+			}
+
+			var c = 0;
+
+			var numero = saludar("Daniela");
+
+			var sumar = function(a, b) {
+				var c = a + b;
+				return c;
+
+			};
+
+			var multiplicar = function(a, b) {
+
+				var c = a + b;
+				return c;
+			};
+
+			var suma = sumar(2, 5);
+			var multiplicacion = multiplicar(2, 5);
+
+			document.write("<h2> SUMA " + suma + "</h2>")
+			document.write("<h2> MULTIPLICACIÓN " + multiplicacion + "</h2>")
+			document.write("<h2> El valor de C es " + c + "</h2>")
+
+			//funcion anonima
+
+			//una funcion como argumento
+			//sepuede definir ahi mismo
+
+			//scope de una variable
+
+			var operacion = function(unaFuncion) {
+				var resultado
+				unaFuncion(3, 4);
+				alert("El resultado es" + resultado);
+			};
+			
+			(function() {
+				var sumar = function() {
+					document.write("soy la funcion1");
+				};
+
+				var c = 5;
+
+				sumar();
+
+			})();
+		</script>
+	</head>
+	<body></body>
 </html>
